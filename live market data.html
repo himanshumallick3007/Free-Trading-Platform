@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Trading Data APIs</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #1e242b;
+            color: #e1e5ee;
+        }
+
+        header {
+            background: #141a23;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        header h1 {
+            margin: 0;
+            color: #00d4a6;
+            font-size: 1.8rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #232a33;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #2c3a47;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            text-align: left;
+        }
+
+        th {
+            color: #a0aec0;
+            font-weight: normal;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1e242b;
+        }
+
+        tr:hover {
+            background-color: #27303d;
+        }
+
+        a {
+            color: #00d4a6;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+
+            th,
+            td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Free Market Data APIs</h1>
+    </header>
+
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>API Provider</th>
+                    <th>Coverage</th>
+                    <th>Free Tier</th>
+                    <th>Docs / Sign-Up</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alpha Vantage</td>
+                    <td>Stocks, Forex, Crypto</td>
+                    <td>5 req/minute • 500 req/day</td>
+                    <td><a href="https://www.alphavantage.co/" target="_blank">alphavantage.co</a></td>
+                </tr>
+                <tr>
+                    <td>Finnhub</td>
+                    <td>Stocks, Forex, Crypto, News</td>
+                    <td>60 req/minute • 100 000 req/month</td>
+                    <td><a href="https://finnhub.io/" target="_blank">finnhub.io</a></td>
+                </tr>
+                <tr>
+                    <td>IEX Cloud (Sandbox)</td>
+                    <td>US Equities</td>
+                    <td>Sandbox unlimited • Prod 50 000 msgs/month</td>
+                    <td><a href="https://iexcloud.io/" target="_blank">iexcloud.io</a></td>
+                </tr>
+                <tr>
+                    <td>CoinGecko</td>
+                    <td>Crypto Prices, Market Data</td>
+                    <td>Unlimited non-commercial</td>
+                    <td><a href="https://www.coingecko.com/en/api" target="_blank">coingecko.com/api</a></td>
+                </tr>
+                <tr>
+                    <td>CryptoCompare</td>
+                    <td>Crypto, Historical, Social</td>
+                    <td>100 000 req/month</td>
+                    <td><a href="https://min-api.cryptocompare.com/" target="_blank">cryptocompare.com</a></td>
+                </tr>
+                <tr>
+                    <td>Binance Public API</td>
+                    <td>Spot, Futures, Margin (Crypto)</td>
+                    <td>Rate-limits vary by endpoint</td>
+                    <td><a href="https://github.com/binance/binance-spot-api-docs"
+                            target="_blank">github.com/binance</a></td>
+                </tr>
+                <tr>
+                    <td>Polygon.io (Free)</td>
+                    <td>Stocks (US), Forex, Crypto</td>
+                    <td>5 req/minute • 500 req/day</td>
+                    <td><a href="https://polygon.io/" target="_blank">polygon.io</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+</body>
+
+</html>

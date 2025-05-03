@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Algo Trading - TradeX Platform</title>
+    <style>
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #101822;
+            color: #e0e6ed;
+        }
+
+        header {
+            animation: fadeIn 1s ease both;
+            background: linear-gradient(90deg, #50608b, #0333c2);
+            padding: 20px 40px;
+            box-shadow: 0 2px 10px white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #00d4a6;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav li {
+            cursor: pointer;
+            color: #e0e6ed;
+            transition: color 0.3s;
+        }
+
+        nav li:hover {
+            color: #00d4a6;
+        }
+
+        .hero {
+            animation: fadeInUp 1s ease both;
+            background: linear-gradient(to right, #14233c, #194452);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .algo-section {
+            padding: 50px 20px;
+            background-color: #1a2533;
+        }
+
+        .algo-section h2 {
+            animation: fadeInUp 1s ease both 0.3s;
+            animation-fill-mode: both;
+            text-align: center;
+            font-size: 28px;
+            margin-bottom: 30px;
+            color: #00d4a6;
+        }
+
+        .selector {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        select {
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #34495e;
+            background-color: #18222f;
+            color: #e0e6ed;
+            animation: fadeInUp 1s ease both 0.5s;
+            animation-fill-mode: both;
+        }
+
+        .strategy-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .strategy-card {
+            background-color: #253344;
+            padding: 20px;
+            border-radius: 12px;
+            width: 280px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #2c3e50;
+            animation: fadeInUp 1s ease both;
+            animation-fill-mode: both;
+        }
+
+        .strategy-card:nth-child(1) {
+            animation-delay: 0.6s;
+        }
+
+        .strategy-card:nth-child(2) {
+            animation-delay: 0.8s;
+        }
+
+        .strategy-card:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+            background-color: #2e3c50;
+        }
+
+        .strategy-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            color: #00d4a6;
+        }
+
+        .strategy-desc {
+            font-size: 15px;
+            color: #c3d1df;
+        }
+
+        .metrics {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .metric-box {
+            background-color: #1e2d3d;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 200px;
+            border: 1px solid #34495e;
+            animation: fadeInUp 1s ease both 1.2s;
+            animation-fill-mode: both;
+        }
+
+        .metric-title {
+            font-weight: bold;
+            color: #ecf0f1;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 20px;
+            color: #00d4a6;
+        }
+
+        footer {
+            animation: fadeIn 1s ease both 1.4s;
+            background-color: #0c1a2b;
+            color: #95a5a6;
+            text-align: center;
+            padding: 20px;
+            margin-top: 60px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">TradeX</div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./Futures.html">Features</a></li>
+                <li><a href="./Markets.html">Markets</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Algo Trading</h1>
+        <p>Automate your strategies with precision and speed using our intelligent algorithms.</p>
+    </section>
+
+    <section class="algo-section">
+        <h2>Select a Trading Strategy</h2>
+        <div class="selector">
+            <label for="algo-select"><strong>Choose Algorithm:</strong></label>
+            <select id="algo-select" onchange="updateDescription()">
+                <option value="momentum">Momentum Strategy</option>
+                <option value="mean">Mean Reversion</option>
+                <option value="breakout">Breakout Detection</option>
+                <option value="scalping">Scalping Bot</option>
+            </select>
+        </div>
+
+        <div class="strategy-options">
+            <div class="strategy-card">
+                <div class="strategy-title">Strategy Details</div>
+                <div class="strategy-desc" id="strategy-desc">
+                    Identifies stocks with upward trends and enters long positions based on volume and speed.
+                </div>
+            </div>
+        </div>
+
+        <div class="metrics">
+            <div class="metric-box">
+                <div class="metric-title">Win Rate</div>
+                <div class="metric-value" id="metric-winrate">68%</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-title">Avg ROI</div>
+                <div class="metric-value" id="metric-roi">12.5%</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-title">Frequency</div>
+                <div class="metric-value" id="metric-freq">Medium</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 TradeX Platform. All rights reserved.
+    </footer>
+
+    <script>
+        const descriptions = {
+            momentum: "Identifies stocks with upward trends and enters long positions based on volume and speed.",
+            mean: "Looks for price deviations from averages and trades expecting reversion to the mean.",
+            breakout: "Scans for key support/resistance breaks with volume confirmation to enter trades.",
+            scalping: "Executes rapid trades for small profits multiple times a day using low-latency algorithms."
+        };
+        const metrics = {
+            momentum: { winrate: "68%", roi: "12.5%", freq: "Medium" },
+            mean: { winrate: "72%", roi: "10.2%", freq: "Low" },
+            breakout: { winrate: "65%", roi: "14.8%", freq: "High" },
+            scalping: { winrate: "60%", roi: "7.3%", freq: "Very High" }
+        };
+        function updateDescription() {
+            const v = document.getElementById("algo-select").value;
+            document.getElementById("strategy-desc").innerText = descriptions[v];
+            document.getElementById("metric-winrate").innerText = metrics[v].winrate;
+            document.getElementById("metric-roi").innerText = metrics[v].roi;
+            document.getElementById("metric-freq").innerText = metrics[v].freq;
+        }
+    </script>
+</body>
+
+</html>
